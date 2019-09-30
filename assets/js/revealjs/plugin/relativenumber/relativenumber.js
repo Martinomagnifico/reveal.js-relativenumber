@@ -10,4 +10,26 @@
  * Thanks to:
  *  - Hakim El Hattab, Reveal.js
 ******************************************************************/
-const relativeNumber=window.relativeNumber||{init:function(){!function(e){const r=document.querySelector(".reveal > .slide-number"),n=document.querySelector(".reveal > * .slide-number");r&&n&&n.parentNode.replaceChild(r,n)}()}};Reveal.registerPlugin("relativenumber",relativeNumber);
+
+const relativeNumber = window.relativeNumber || (function(){
+
+	const moveSlideNumber = function (event) {
+		const curNum = document.querySelector('.reveal > .slide-number')
+		const newNum = document.querySelector(".reveal > * .slide-number");
+		if (curNum && newNum ) {
+			newNum.parentNode.replaceChild(curNum, newNum);
+		}
+	}
+
+	const init = function () {
+		moveSlideNumber();
+	};
+
+	return {
+		init: init
+	};
+
+})();
+
+Reveal.registerPlugin('relativenumber', relativeNumber);
+/* global Reveal */
