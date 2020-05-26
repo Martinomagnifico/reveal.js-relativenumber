@@ -1,5 +1,8 @@
-# reveal.js-relativenumber
-A simple plugin for [Reveal.js](https://revealjs.com) that moves the slidenumber to a desired location. 
+# Relativenumber
+
+![Screenshot](screenshot.png)
+
+A simple plugin for [Reveal.js](https://revealjs.com) 4, that moves the slidenumber to a desired location. 
 
 Reveal.js creates a 'slide-number' element in the presentation if it is turned on in the configuration. This element is positioned absolutely as a sibling to the slides. But sometimes you want it inside a menubar or some other element. This plugin does just that.
 
@@ -14,16 +17,45 @@ RelativeNumber.js only does one thing: It checks of there already is an element 
 Copy the relativenumber folder to the plugins folder of the reveal.js folder, like this: `plugin/relativenumber`. Now add it to the dependencies of Reveal.js. :
 
 
-```javascript
-Reveal.initialize({
-	// ...
-	dependencies: [
-		// ... 
-		{ src: 'assets/js/revealjs/plugin/relativenumber/relativenumber.js', async: true },
-		// ... 
-	]
-});
+### JavaScript
+
+The RelativeNumber plugin has been rewritten for Reveal.js version 4.
+
+If you want to use RelativeNumber with an older version of Reveal, use the [1.0.0 version](https://github.com/Martinomagnifico/reveal.js-relativenumber/releases).
+
+There are two JavaScript files for RelativeNumber, a regular one, `relativenumber.js`, and a module one, `relativenumber.esm.js`. You only need one of them:
+
+
+#### Regular 
+If you're not using ES modules, for example, to be able to run your presentation from the filesystem, you can add it like this:
+
+```html
+<script type="text/javascript" src="dist/reveal.js"></script>
+<script src="plugin/relativenumber/relativenumber.js"></script>
+<script>
+	Reveal.initialize({
+		// ...
+		plugins: [ RelativeNumber ]
+	});
+</script>
 ```
+
+#### As a module 
+If you're using ES modules, you can add it like this:
+
+```html
+<script type="module">
+	// This will need a server
+	import Reveal from './dist/reveal.esm.js';
+	import RelativeNumber from './plugin/relativenumber/relativenumber.js';
+	Reveal.initialize({
+		// ...
+		plugins: [ RelativeNumber ]
+	});
+</script>
+```
+
+
 
 
 ## Setup
@@ -60,4 +92,4 @@ If you like it, please star this repo.
 ## License
 MIT licensed
 
-Copyright (C) 2019 Martijn De Jongh (Martino)
+Copyright (C) 2020 Martijn De Jongh (Martino)
