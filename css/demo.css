@@ -1,0 +1,68 @@
+.backgrounds {
+  background: #1a1626; }
+
+.slides {
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  -o-transition: opacity .5s ease;
+  transition: opacity .5s ease; }
+
+.reveal.ready .slides {
+  opacity: 1; }
+
+.reveal .slide-number {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  position: relative;
+  right: auto;
+  bottom: auto;
+  display: inline-block !important;
+  background: none;
+  padding: 0;
+  justify-self: left; }
+
+.menubar {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: none;
+  padding: 0 3vmin;
+  z-index: 2;
+  border-bottom: 1px solid white;
+  height: 8vmin;
+  top: -8vmin;
+  -webkit-transition: top 1s ease-in-out;
+  -o-transition: top 1s ease-in-out;
+  transition: top 1s ease-in-out; }
+
+.reveal.ready .menubar {
+  top: 0; }
+
+.menubar, .menubar a {
+  font-size: 1rem;
+  line-height: 1; }
+
+.menubar ul {
+  margin: 0; }
+
+.menubar ul li {
+  display: inline;
+  padding: 0 1vmax; }
+
+.reveal .slide-number, .menubar a {
+  color: white; }
+
+.menubar a:hover {
+  color: red; }
+
+.menubar .placeholder, .reveal .slide-number {
+  min-width: 4em; }
+
+.menubar .placeholder {
+  opacity: 0; }

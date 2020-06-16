@@ -1,125 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>RelativeNumber.js for Reveal.js</title>
+    <title>RelativeNumber for Reveal.js</title>
     <meta name="description" content="">
     <meta name="author" content="Martinomagnifico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <link rel="stylesheet" href="dist/reset.css">
-    <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/black.css">
-    <style>
-      .slides {
-      	opacity: 0;
-      	transition: opacity .5s ease;
-      }
-      .reveal.ready .slides {
-      	opacity: 1;
-      }
-    </style>
-    <style>
-      .backgrounds {
-      	background: #1a1626;
-      }
-      .reveal {
-      	opacity: 0;
-      	transition: opacity 2s ease-in-out;
-      }
-      .reveal.ready {
-      	opacity: 1;
-      }
-      .reveal .slide-number {
-      	font-family: "Source Sans Pro", Helvetica, sans-serif;
-      	position: relative;
-      	right: auto;
-      	bottom: auto;
-      	display: inline-block !important;
-      	background: none;
-      	padding: 0;
-      	justify-self: left;
-      }
-      .menubar {
-      	position: relative;
-      	display: flex;
-      	justify-content: space-between;
-      	align-items: center;
-      	background: none;
-      	padding: 0 3vmin;
-      	z-index: 2;
-      	border-bottom: 1px solid white;
-      	height: 8vmin;
-      	top: -8vmin;
-      	transition: top 1s ease-in-out;
-      }
-      .reveal.ready .menubar {
-      	top: 0;
-      }
-      .menubar, .menubar a {
-      	font-size: 1rem;
-      	line-height: 1;
-      }
-      .menubar ul {
-      	margin: 0;
-      }
-      .menubar ul li {
-      	display: inline;
-      	padding: 0 1vmax;
-      }
-      .reveal .slide-number, .menubar a {
-      	color: white;
-      }
-      .menubar a:hover {
-      	color: red;
-      }
-      .menubar .placeholder, .reveal .slide-number {
-      	min-width: 4em;
-      }
-      .menubar .placeholder {
-      	opacity: 0;
-      }
-      
-    </style>
-  </head>
-  <body>
-    <div class="reveal">
-      <div class="menubar">
-        <div class="slide-number"></div>
-        <ul class="menu">
-          <li><a href="#">Menuitem 1</a></li>
-          <li><a href="#">Menuitem 2</a></li>
-          <li><a href="#">Menuitem 3</a></li>
-        </ul>
-        <div class="placeholder"></div>
-      </div>
-      <div class="slides">
-        <section class="center" data-transition="fade">
-          <h1>RelativeNumber</h1>
-          <h3>for Reveal.js</h3>
-        </section>
-        <section class="center">
-          <p>This simple plugin checks if there already is an element with the class "slide-number" in the presentation. If so, it moves the slidenumber there.</p>
-        </section>
-        <section class="center">
-          <p>Create an empty element with class "slide-number" in your document. For example, in a menubar like above.</p>
-        </section>
-        <section class="center">
-          <p>Now you can style it and make it fit in your content. For example, give it a relative position.</p>
-        </section>
-        <section class="center">
-          <p>For the menu you might use my <a href="https://github.com/Martinomagnifico/reveal.js-simplemenu">simplemenu</a> plugin. </p>
-        </section>
-      </div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+
+<body>
+    <div class="reveal" data-fs-toggle="fullscreen">
+        <div class="menubar">
+            <div class="slide-number"></div>
+            <ul class="menu">
+                <li><a href="#">Menuitem 1</a></li>
+                <li><a href="#">Menuitem 2</a></li>
+                <li><a href="#">Menuitem 3</a></li>
+            </ul>
+            <div class="placeholder"></div>
+        </div>
+        <div class="slides">
+            <section class="center" data-transition="fade">
+                <h1>RelativeNumber</h1>
+                <h3>for Reveal.js</h3>
+            </section>
+            <section class="center">
+                <p>This simple plugin checks if there already is an element with the class "slide-number" in the presentation. If so, it moves the slidenumber there.</p>
+            </section>
+            <section class="center">
+                <p>Create an empty element with class "slide-number" in your document. For example, in a menubar like above.</p>
+            </section>
+            <section class="center">
+                <p>Now you can style it and make it fit in your content. For example, give it a relative position.</p>
+            </section>
+            <section class="center">
+                <p>For the menu you might use my <a href="https://github.com/Martinomagnifico/reveal.js-simplemenu">simplemenu</a> plugin. </p>
+            </section>
+        </div>
     </div>
-    <script type="text/javascript" src="dist/reveal.js"></script>
-    <script type="text/javascript" src="plugin/relativenumber/relativenumber.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+    <script src="plugin/relativenumber/relativenumber.js"></script>
     <script>
-      Reveal.initialize({
-      	transition: 'convex',
-      	slideNumber: 'c/t',
-      	plugins: [ RelativeNumber ]
-      });
+        Reveal.initialize({
+            transition: "convex",
+            slideNumber: "c/t",
+            plugins: [
+                RelativeNumber
+            ]
+        });
     </script>
-  </body>
+</body>
+
 </html>
