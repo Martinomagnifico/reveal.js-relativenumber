@@ -14,8 +14,21 @@ RelativeNumber.js only does one thing: It checks of there already is an element 
 
 ## Installation
 
-Copy the relativenumber folder to the plugins folder of the reveal.js folder, like this: `plugin/relativenumber`. Now add it to the dependencies of Reveal.js. :
+Copy the relativenumber folder to the plugins folder of the reveal.js folder, like this: `plugin/relativenumber`.
 
+
+### npm installation
+
+This plugin is published to, and can be installed from, npm.
+
+```javascript
+npm install reveal.js-relativenumber
+```
+The RelativeNumber plugin folder can then be referenced from `node_modules/reveal.js-relativenumber/plugin/relativenumber `
+
+
+
+## Setup
 
 ### JavaScript
 
@@ -56,11 +69,9 @@ If you're using ES modules, you can add it like this:
 ```
 
 
+### HTML
 
-
-## Setup
-
-Create an empty div with the class 'slide-number' at the desired location. That's it. In this example I put it in a menubar.
+Create an empty div with the class 'slide-number' at the desired location. That's it.
 
 ```html
 <div class="reveal">
@@ -79,12 +90,14 @@ Create an empty div with the class 'slide-number' at the desired location. That'
 </div>
 ```
 
-Note that I added a 'placeholder' element as well. This is to keep the main menu centered and the slidenumbers to the left. It is not necessary.
+In this example I put it in a menubar. Note that I added a 'placeholder' element as well. This is to keep the main menu centered and the slidenumbers to the left. It is not necessary.
 
 
 ## Like it?
 
-If you like it, please star this repo.
+If you like it, please star this repo! 
+
+And if you want to show off what you made with it, please do :-)
 
 
 
