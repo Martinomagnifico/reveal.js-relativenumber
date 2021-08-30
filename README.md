@@ -1,5 +1,7 @@
 # Relativenumber
 
+[![Version](https://img.shields.io/npm/v/reveal.js-relativenumber)](#) [![Downloads](https://img.shields.io/npm/dt/reveal.js-relativenumber)](https://github.com/Martinomagnifico/reveal.js-relativenumber/archive/refs/heads/master.zip)
+
 A simple plugin for [Reveal.js](https://revealjs.com) 4, that moves the slidenumber to a desired (relative) location. 
 
 [![Screenshot](screenshot.png)](https://martinomagnifico.github.io/reveal.js-relativenumber/demo.html)
