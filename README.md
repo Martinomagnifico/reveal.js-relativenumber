@@ -23,7 +23,7 @@ Copy the relativenumber folder to the plugins folder of the reveal.js folder, li
 
 This plugin is published to, and can be installed from, npm.
 
-```javascript
+```console
 npm install reveal.js-relativenumber
 ```
 The RelativeNumber plugin folder can then be referenced from `node_modules/reveal.js-relativenumber/plugin/relativenumber `
