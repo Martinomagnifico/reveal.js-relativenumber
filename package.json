@@ -1,6 +1,6 @@
 {
     "name": "reveal.js-relativenumber",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A simple plugin for Reveal.js 4, that moves the slidenumber to a desired (relative) location",
     "keywords": "reveal, reveal.js, reveal-plugin, plugin, slidenumber",
     "homepage": "https://github.com/Martinomagnifico/reveal.js-relativenumber",
@@ -8,9 +8,9 @@
         "type": "git",
         "url": "https://github.com/Martinomagnifico/reveal.js-relativenumber.git"
     },
-    "peerDependencies": {
-        "reveal.js": "^4.0"
-    },
     "author": "Martijn De Jongh",
-    "license": "MIT, Copyright (C) 2020 Martijn De Jongh"
+    "license": "MIT, Copyright (C) 2022 Martijn De Jongh",
+    "peerDependencies": {
+        "reveal.js": "^4.2"
+    }
 }

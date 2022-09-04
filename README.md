@@ -4,7 +4,7 @@
 
 A simple plugin for [Reveal.js](https://revealjs.com) 4, that moves the slidenumber to a desired (relative) location. 
 
-[![Screenshot](screenshot.png)](https://martinomagnifico.github.io/reveal.js-relativenumber/demo.html)
+[![Screenshot](https://martinomagnifico.github.io/reveal.js-relativenumber/screenshot.png)](https://martinomagnifico.github.io/reveal.js-relativenumber/demo.html)
 
 Reveal.js creates a 'slide-number' element in the presentation if it is turned on in the configuration. This element is positioned absolutely as a sibling to the slides. But sometimes you want it inside a menubar or some other element. This plugin does just that.
 
@@ -62,7 +62,7 @@ If you're using ES modules, you can add it like this:
 <script type="module">
 	// This will need a server
 	import Reveal from './dist/reveal.esm.js';
-	import RelativeNumber from './plugin/relativenumber/relativenumber.js';
+	import RelativeNumber from './plugin/relativenumber/relativenumber.esm.js';
 	Reveal.initialize({
 		// ...
 		plugins: [ RelativeNumber ]

@@ -4,7 +4,7 @@
  * https://github.com/Martinomagnifico
  *
  * RelativeNumber.js for Reveal.js 
- * Version 1.0.1
+ * Version 1.0.2
  * 
  * @license 
  * MIT licensed
@@ -17,22 +17,42 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
 	typeof define === 'function' && define.amd ? define(factory) :
-	(global = global || self, global.RelativeNumber = factory());
-}(this, (function () { 'use strict';
+	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.RelativeNumber = factory());
+})(this, (function () { 'use strict';
 
 	var Plugin = function Plugin() {
 	  var moveSlideNumber = function moveSlideNumber(deck) {
 	    var curNum = deck.getRevealElement().querySelector(".reveal > .slide-number");
 	    var newNum = deck.getRevealElement().querySelector(".reveal > * .slide-number");
+	    var newNumClassList = newNum.classList;
 
 	    if (curNum && newNum) {
 	      newNum.parentNode.replaceChild(curNum, newNum);
+	      curNum.classList = newNumClassList;
 	    }
+	  };
+
+	  var printSlideNumber = function printSlideNumber(deck) {
+	    var pages = deck.getRevealElement().querySelectorAll(".pdf-page");
+	    pages.forEach(function (page) {
+	      var section = page.querySelectorAll("section")[0];
+	      var curNum = section.getAttribute('data-slide-number');
+	      var newNums = page.querySelectorAll(".slide-number");
+
+	      if (curNum && newNums) {
+	        newNums.forEach(function (newNum) {
+	          newNum.innerHTML = curNum;
+	        });
+	      }
+	    });
 	  };
 
 	  var init = function init(deck) {
 	    deck.on('ready', function (event) {
 	      moveSlideNumber(deck);
+	    });
+	    deck.on('pdf-ready', function (event) {
+	      printSlideNumber(deck);
 	    });
 	  };
 
@@ -44,4 +64,4 @@
 
 	return Plugin;
 
-})));
+}));
